@@ -34,7 +34,7 @@ const ClimaProvider = ({ children }) => {
         const key = import.meta.env.VITE_API_KEY;
         const {ciudad,pais} = datos;
         try {
-            const urlCoordenadas = `http://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${key}`
+            const urlCoordenadas = `https://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${key}`
             const {data} = await axios(urlCoordenadas);
             const {lat,lon} = data[0];
 
